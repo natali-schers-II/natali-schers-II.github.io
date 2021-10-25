@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Parallax Scrolling Website | Vanilla JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<header id="header">
+		<a href="#" class="logo">Jungle</a>	
+		<ul>
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Destination</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</header>
+
+	<section>
+		<h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+		<img src="img/bird1.png" id="bird1">
+		<img src="img/bird2.png" id="bird2">
+		<img src="img/forest.png" id="forest">
+		<a href="#" id="btn">Explore</a>
+		<img src="img/rocks.png" id="rocks">
+		<img src="img/water.png" id="water">
+	</section>
+
+	<div class="sec">
+		<h2>Parallax Scrolling Effects</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultrices augue dolor, non congue ipsum tristique sit amet. Nam tempor imperdiet nisi a vehicula. Aliquam erat volutpat. Duis elementum elementum finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sit amet nunc et nibh cursus scelerisque id eu lorem. Nullam dictum odio vel lectus commodo cursus. Vivamus ornare libero nulla, sit amet laoreet libero luctus sed. Integer faucibus sollicitudin efficitur. Vestibulum fringilla dictum metus quis vestibulum. Integer non dolor vel urna consectetur porttitor ac ut mi.</p><br><br>
+		<p>Mauris blandit velit nec quam tincidunt, eu molestie nibh tempor. Proin ac nunc nisl. Duis et viverra massa. Nam sit amet lorem ac elit commodo rhoncus et vitae metus. Morbi egestas posuere lacus in blandit. Suspendisse fringilla non est sed facilisis. Aliquam erat volutpat. Aenean non diam vel dolor eleifend condimentum vel nec tortor. Vestibulum in tincidunt mauris. Curabitur eu magna eu ipsum rhoncus porta in eget sapien. Fusce sed tincidunt leo. Fusce condimentum, nisl et finibus blandit, sapien nibh vulputate mauris, ut bibendum lacus ipsum quis nulla. Phasellus vel orci sem. Proin eu maximus tortor, id gravida orci. Sed viverra, orci id egestas pulvinar, est leo varius ex, non mollis risus arcu sed enim.</p><br><br>
+		<p>Donec vitae diam quis dui dictum semper. Pellentesque at ornare eros. Maecenas auctor rutrum leo et consectetur. Ut at ex ut elit luctus pretium maximus ac ligula. Aenean risus tellus, aliquam sed nibh vel, pulvinar aliquet tortor. Suspendisse vel libero luctus, interdum justo ut, sagittis enim. Fusce vitae cursus elit, id feugiat sem. Aenean tempor eros diam, nec congue lorem aliquet at. Donec ornare urna ut leo euismod euismod. Aliquam sed tempus dui, vel bibendum lacus. Cras egestas ante mi, id semper enim commodo vel. Etiam ullamcorper sed nisi id posuere. Aenean elit leo, tempor placerat tempus et, gravida ac diam. Pellentesque lorem dolor, interdum eu vestibulum eu, tempus sed libero. Sed elementum mi non cursus bibendum.</p><br><br>
+		<p>Aliquam sem nisl, ultricies et tortor non, consequat ullamcorper nunc. Pellentesque et diam nec magna sagittis pretium. Integer sit amet mauris quis tortor sagittis rhoncus id non ligula. Fusce sed turpis id enim lobortis auctor id et eros. Aliquam quis lacus ac nulla finibus lobortis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Duis vehicula rhoncus risus, scelerisque vestibulum augue convallis fringilla. Nam tortor odio, tristique eu sem eu, posuere tempus arcu. Sed condimentum urna nec erat tempus finibus. Quisque eu purus porta, porttitor nibh ac, tincidunt magna.</p><br><br>
+		<p>Vivamus commodo dui vitae iaculis varius. Quisque consectetur sed justo id fringilla. Sed nisi nibh, porta quis enim non, suscipit aliquet lectus. Suspendisse molestie neque posuere ante porttitor, nec auctor tellus tincidunt. Quisque ut scelerisque sem. Donec tempus luctus arcu id efficitur. Nulla luctus urna a tempor ultricies. Vivamus sodales sem dolor, vitae dapibus felis venenatis sed.</p><br><br>
+		<p>In vitae blandit risus. Nulla congue, eros et efficitur tincidunt, mi tortor pellentesque dui, sed malesuada risus diam non ex. Morbi urna nibh, vehicula in augue eget, efficitur commodo augue. Fusce sollicitudin ipsum sed sem ullamcorper, id luctus odio bibendum. Sed et placerat ante. Vivamus molestie commodo aliquam. Integer finibus eros mauris, id ornare orci luctus nec. Curabitur dignissim metus felis, non malesuada diam aliquet sed. Curabitur justo sem, imperdiet eleifend sapien a, ullamcorper porttitor lacus. Nam tincidunt lacus eget condimentum lacinia. Suspendisse finibus urna non egestas tincidunt. Pellentesque id accumsan quam. Quisque vitae interdum erat. Cras sollicitudin et diam non lacinia. Integer vulputate nisl in rutrum elementum.</p>
+	</div>
+
+	<script>
+		let text = document.getElementById('text');
+		let bird1 = document.getElementById('bird1');
+		let bird2 = document.getElementById('bird2');
+		let btn = document.getElementById('btn');
+		let forest = document.getElementById('forest');
+		let rocks = document.getElementById('rocks');
+		let header = document.getElementById('header');
+
+		window.addEventListener('scroll', function() {
+			let value = window.scrollY;
+			text.style.marginBottom = value * 2.5 + 'px';
+			bird1.style.top = value * -1.5 + 'px';
+			bird1.style.left = value * 2 + 'px';
+			bird2.style.top = value * -1.5 + 'px';
+			bird2.style.left = value * -5 + 'px';
+			btn.style.marginTop = value * 1.5 + 'px';
+			rocks.style.top = value * -0.12 + 'px';
+			forest.style.top = value * 0.25 + 'px';
+			header.style.top = value * -0.5 + 'px';
+		});
+	</script>
+
+</body>
+</html>
