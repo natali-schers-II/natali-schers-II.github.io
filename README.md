@@ -1,3 +1,4 @@
 # natali-schers-II.github.io
 
-site-floresta: feito para treinar criação de layouts e uso do parallax. (https://natali-schers-II.github.io/site-floresta/)
+site-floresta: https://natali-schers-II.github.io/site-floresta/
+tela-de-login: https://natali-schers-II.github.io/tela-de-login/
